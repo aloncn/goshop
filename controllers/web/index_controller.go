@@ -17,6 +17,9 @@ func (c *IndexController) URLMapping() {
 	c.Mapping("GetData", c.GetData)
 	c.Mapping("GetBanner", c.GetBanner)
 }
+func (c *IndexController) Index() {
+	c.JsonResult(http.GetHttpStatusByAlias("ok"), http.ErrOK, http.Success)
+}
 
 // @router / [get]
 func (c *IndexController) GetData() {
