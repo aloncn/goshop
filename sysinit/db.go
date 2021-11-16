@@ -10,6 +10,6 @@ func dbInit() {
 	/**
 	 * 打印SQL语句
 	 */
-	orm.Debug = true
+	orm.Debug = false
 	_ = orm.RegisterDataBase("default", "mysql", beego.AppConfig.String("sqlconn"))
 }

@@ -1,6 +1,7 @@
 package admin
 
 import (
+	"fmt"
 	"go-shop-b2c/common"
 	"go-shop-b2c/common/http"
 	roleHelper "go-shop-b2c/common/role"
@@ -61,6 +62,8 @@ func (c *UserController) Login() {
 			c.ServerError(err)
 		}
 		c.SetSecureCookie(common.AppKey(), "admin_login", v, 24*3600)
+		fmt.Println("cookie",common.AppKey())
+		fmt.Println(c.GetSecureCookie(common.AppKey(), "admin_login"))
 		// 最后登录IP
 		currentAdmin.LoginIp = c.Ctx.Input.IP()
 		currentAdmin.LoginDate = time.Now()

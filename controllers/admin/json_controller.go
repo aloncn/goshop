@@ -1,6 +1,7 @@
 package admin
 
 import (
+	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"go-shop-b2c/common"
@@ -47,5 +48,6 @@ func (c *JsonController) SetSessionUser(admin models.Admin) {
 	} else {
 		c.SetSession(common.SessionName, admin)
 		c.SetSession("uid", admin.Id)
+		fmt.Println("session", c.CruSession.SessionID(), c.GetSession(common.SessionName))
 	}
 }

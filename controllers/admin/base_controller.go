@@ -1,6 +1,7 @@
 package admin
 
 import (
+	"fmt"
 	"go-shop-b2c/common"
 	"go-shop-b2c/common/http"
 	"go-shop-b2c/helpers"
@@ -22,7 +23,7 @@ type CookieAdmin struct {
 /**
  * 每个子类Controller公用方法调用前，都执行一下Prepare方法
  */
-func (c *BaseController) Prepare() {
+func (c *BaseController) PrepareBak() {
 	c.Admin = &models.Admin{} // 初始化
 	/**
 	 * 从session中获取用户信息
@@ -33,7 +34,10 @@ func (c *BaseController) Prepare() {
 		/**
 		 * 如果Cookie中存在登录信息，从cookie中获取用户信息
 		 */
-		if cookie, ok := c.GetSecureCookie(common.AppKey(), "login"); ok {
+		cookie, ok := c.GetSecureCookie(common.AppKey(), "admin_login")
+		fmt.Println("cookie",cookie,ok)
+
+		if ok {
 			var cookieAdmin CookieAdmin
 			err := helpers.Decode(cookie, &cookieAdmin)
 			if err == nil {

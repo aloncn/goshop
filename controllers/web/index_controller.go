@@ -1,6 +1,7 @@
 package web
 
 import (
+	"fmt"
 	"go-shop-b2c/common/http"
 	"go-shop-b2c/model_views"
 	"go-shop-b2c/models"
@@ -16,9 +17,22 @@ type IndexController struct {
 func (c *IndexController) URLMapping() {
 	c.Mapping("GetData", c.GetData)
 	c.Mapping("GetBanner", c.GetBanner)
+	c.Mapping("GetDemo", c.GetDemo)
 }
-func (c *IndexController) Index() {
-	c.JsonResult(http.GetHttpStatusByAlias("ok"), http.ErrOK, http.Success)
+
+
+// @router /demo [get]
+func (c *IndexController) GetDemo() {
+	action := c.GetString("act")
+	if action == "1" {
+		c.SetSession("demo", 1)
+		fmt.Println("get", c.GetSession("demo"))
+	}else{
+		si := c.GetSession("demo")
+		fmt.Println("si", si)
+	}
+	fmt.Println("sessionId", c.CruSession.SessionID())
+	c.JsonResult(http.GetHttpStatusByAlias("ok"), http.ErrOK, http.Success, nil)
 }
 
 // @router / [get]

@@ -3,7 +3,6 @@ module go-shop-b2c
 go 1.13
 
 require (
-	//github.com/astaxie/beego v1.12.3
 	github.com/astaxie/beego v1.12.3
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/go-sql-driver/mysql v1.6.0

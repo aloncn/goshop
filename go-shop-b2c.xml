@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <go-shop-b2c>
-	<setting name="siteName">媛梦佳人美容院</setting>
-	<setting name="siteUrl">http://test.sonyo.com/</setting>
+	<setting name="siteName">有家小店</setting>
+	<setting name="siteUrl">http://127.0.0.1/</setting>
 	<setting name="logo">/upload/image/logo.png</setting>
 	<setting name="hotSearch">苹果,三星,索尼,华为,魅族,佳能,小米,美的,格力</setting>
-	<setting name="address">湖南长沙经济技术开发区</setting>
-	<setting name="zipCode">400000</setting>
-	<setting name="email">service@shopec.net</setting>
-	<setting name="certtext">湘ICP备10000000号</setting>
+	<setting name="address">中国南京</setting>
+	<setting name="zipCode">211000</setting>
+	<setting name="email">service@xx.com</setting>
+	<setting name="certtext">苏ICP备10000000号</setting>
 	<setting name="locale">zh_CN</setting>
 	<setting name="defaultLargeProductImage">/upload/image/default_large_product_image.png</setting>
 	<setting name="defaultMediumProductImage">/upload/image/default_medium_product_image.png</setting>
@@ -38,12 +38,12 @@
 	<setting name="imageUploadPath">/static/upload/image/200601/</setting>
 	<setting name="mediaUploadPath">/upload/media/200601/</setting>
 	<setting name="fileUploadPath">/upload/file/200601/</setting>
-	<setting name="smtpHost">smtp.shopec.net</setting>
+	<setting name="smtpHost">smtp.xxx.com</setting>
 	<setting name="smtpPort">25</setting>
 	<setting name="smtpUsername">test</setting>
 	<setting name="smtpPassword">test</setting>
 	<setting name="smtpSSLEnabled">false</setting>
-	<setting name="smtpFromMail">test@shopec.net</setting>
+	<setting name="smtpFromMail">test@xxx.com</setting>
 	<setting name="currencySign">￥</setting>
 	<setting name="currencyUnit">元</setting>
 	<setting name="stockAlertCount">5</setting>
@@ -58,7 +58,7 @@
 	<setting name="isTaxPriceEnabled">true</setting>
 	<setting name="taxRate">0.06</setting>
 	<setting name="cookiePath">/</setting>
-	<setting name="cookieDomain"></setting>
+	<setting name="cookieDomain">http://127.0.0.1:8000</setting>
 	<setting name="kuaidi100Key"></setting>
 	<setting name="kuaidi100Customer"></setting>
 	<setting name="smsAppId"></setting>
