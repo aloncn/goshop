@@ -23,7 +23,7 @@ type CookieAdmin struct {
 /**
  * 每个子类Controller公用方法调用前，都执行一下Prepare方法
  */
-func (c *BaseController) PrepareBak() {
+func (c *BaseController) Prepare() {
 	c.Admin = &models.Admin{} // 初始化
 	/**
 	 * 从session中获取用户信息

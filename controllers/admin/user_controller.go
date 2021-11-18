@@ -42,6 +42,8 @@ func (c *UserController) Login() {
 	if v := c.GetString("password"); v != "" {
 		password = v
 	}
+	hash, _ := helpers.PasswordHash(password)
+	fmt.Println("hash", hash)
 
 	currentAdmin, _ := models.GetAdminByUsernameAndIsEnabled(username, 1)
 	if currentAdmin == nil {
